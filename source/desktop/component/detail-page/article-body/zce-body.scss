@@ -1,0 +1,355 @@
+// ----------------------------------
+// INFO :  must not be changed
+// ----------------------------------
+.zce-content-body {
+    >* {
+        margin-top: 16px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    // table not class
+    table:not([class]) {
+        width: 100% !important;
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid #E9ECEF;
+        }
+    }
+
+    // INFO : table max-width, full-width
+    table.picture,
+    table.video {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+        width: max-content;
+        margin: inherit;
+        max-width: 822px;
+
+        tr,
+        td {
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            max-width: fit-content;
+        }
+
+        video {
+            width: 100%;
+        }
+
+        .pic {
+            position: relative;
+
+            img {
+                max-width: 100%;
+                width: auto;
+                display: flex;
+                margin: 0 auto;
+            }
+        }
+
+        .caption {
+            font-weight: 500;
+            margin-top: 8px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #343a40;
+            display: block;
+            text-align: center;
+            font-style: normal;
+
+            >* {
+                margin-top: 0;
+            }
+        }
+
+        &.full-width {
+            max-width: calc(100vw - 17px);
+            width: max-content !important;
+        }
+
+        &.max-width {
+            max-width: 1600px;
+            width: max-content !important;
+
+            @media (max-width: 1600px) {
+                max-width: calc(100vw - 17px);
+
+            }
+        }
+
+    }
+
+    // INFO : table left, right
+    table.picture,
+    table.video {
+
+        // chỉnh box left, phải
+        &[align="center"],
+        &[align="center"],
+        &.align-center,
+        &.align-center {
+            width: 100%;
+        }
+
+        &.outset-left,
+        &.outset-right,
+        &[align="left"],
+        &[align="right"],
+        &.align-left,
+        &.align-right {
+            width: 50%;
+        }
+
+        &[align="left"],
+        &.align-left {
+            margin: initial;
+            float: right;
+            margin-left: 16px;
+            left: 25%;
+        }
+
+        &[align="right"],
+        &.align-right {
+            float: left;
+            margin-right: 16px !important;
+            left: 25%;
+        }
+
+    }
+
+    // INFO : table outset
+    table.picture,
+    table.video {
+        &.outset-left {
+            float: left;
+            margin-right: calc(-25% + 16px);
+            left: 0;
+        }
+
+        &.outset-right {
+            float: right;
+            margin-left: calc(-25% + 16px);
+        }
+    }
+
+    // INFO : blockquote, notebox, poll-box outset
+    blockquote,
+    .notebox,
+    .poll-box {
+        padding: 20px;
+
+        >* {
+            margin-top: 16px !important;
+
+            &:first-child {
+                margin-top: 0 !important;
+            }
+        }
+
+        &[align="right"],
+        &.align-right,
+        &.qright,
+        &.nright {
+            width: 50%;
+            float: right;
+            margin-left: 16px;
+        }
+
+        &[align="left"],
+        &.align-left,
+        &.qleft,
+        &.nleft {
+            width: 50%;
+            float: left;
+            margin-right: 16px;
+        }
+
+        &.outset-left {
+            float: left;
+            margin-left: calc(-25%);
+            margin-right: 16px;
+        }
+
+        &.outset-right {
+            float: right;
+            margin-right: calc(-25%);
+            margin-left: 16px;
+        }
+    }
+
+    // INFOR :style for table in box
+    blockquote,
+    .notebox,
+    .live-zone,
+    .interview-zone {
+
+        table.picture,
+        table.video {
+            max-width: 100% !important;
+            margin: 0;
+
+            &[align="left"] {
+                margin-left: 16px;
+            }
+
+            &.max-width {
+                left: 0;
+                transform: translateX(0);
+                margin: auto;
+            }
+
+            &.outset-left {
+                left: calc(25%);
+                margin: initial;
+                margin-right: 16px;
+            }
+
+            &.outset-right {
+                margin: initial;
+                margin-left: 16px;
+                transform: translateX(0);
+                left: 0;
+            }
+
+        }
+    }
+
+}
+
+// ----------------------------------
+// INFO : be changed
+// ----------------------------------
+blockquote {
+    padding: 30px 24px;
+    margin: 10px 16px 20px;
+    position: relative;
+    border: 1px solid $primary;
+
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        background: url(../img/quote.png) center center/32px no-repeat;
+        position: absolute;
+        background-color: #fff;
+        width: 50px;
+        height: 50px;
+        left: 0;
+        top: 5px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.poll-box {
+    padding: 16px 20px;
+    background: $gray-100;
+
+    .box-heading-line {
+        font-size: 16px;
+        color: $primary;
+        margin-bottom: 16px;
+
+        &:after {
+            background: $gray-400;
+        }
+
+        * {
+            background: $gray-100;
+        }
+    }
+
+    .box-content {
+        margin-bottom: 0;
+
+        .desc {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        span {
+            font-size: 16px;
+            color: $gray-900;
+            display: inline-block;
+        }
+
+        .wrap-button {
+            display: flex;
+            justify-content: flex-start;
+            width: calc(100%);
+            margin: 12px 0 0;
+
+            button {
+                font-size: 14px;
+                color: $gray-600;
+                margin-right: 8px;
+                width: 90px;
+                height: 30px;
+                box-shadow: none;
+            }
+
+            .btn-primary,
+            .btn-send {
+                font-size: 13px;
+                color: $white;
+                font-weight: 500;
+                text-transform: uppercase;
+                background: $primary;
+
+                &:hover {
+                    text-decoration: none;
+                    background: $secondary;
+                }
+            }
+        }
+    }
+}
+
+// ----------------------------------
+// INFO : style for detail-page
+// ----------------------------------
+.detail .zce-content-body {
+
+    table,
+    .notebox,
+    blockquote,
+    .poll-box {
+
+        &.max-width,
+        &.full-width {
+            width: 100% !important;
+
+        }
+
+        &.outset-left {
+            margin-left: 16px;
+        }
+
+        &.outset-right {
+            margin-right: 16px;
+        }
+
+        &.outset-left,
+        &.outset-right {
+            transform: translateX(0);
+            left: 0;
+        }
+
+    }
+
+}
