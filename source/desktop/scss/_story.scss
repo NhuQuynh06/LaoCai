@@ -2,7 +2,7 @@
     display: block;
 
     &:hover {
-        color: $third;
+        color: $primary;
     }
 }
 
@@ -14,9 +14,9 @@
     }
 
     &__thumb {
+        border-radius: 6px;
         overflow: hidden;
-        background: transparent url(../img/background.png) center center/ no-repeat;
-        background: #ccc;
+        background: #ddd;
 
         a {
             display: flex;
@@ -38,13 +38,13 @@
         overflow: hidden;
 
         &:hover {
-            color: $third !important;
+            color: $primary !important;
         }
     }
 
     &__summary {
         font-size: 14px;
-        font-weight: $font-weight-medium;
+        font-weight: $font-weight-normal;
         color: #343a40;
         display: block;
         overflow: hidden;
@@ -52,7 +52,7 @@
 
         >* {
             font-size: 14px;
-            font-weight: $font-weight-medium;
+            font-weight: $font-weight-normal;
             color: #343a40;
             display: block;
             overflow: hidden;
@@ -67,14 +67,14 @@
     &__meta {
         a {
             &:hover {
-                color: $third;
+                color: $primary;
             }
         }
     }
 
     &__sub-heading a {
         &:hover {
-            color: $third !important;
+            color: $primary !important;
         }
     }
 }

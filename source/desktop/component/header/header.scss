@@ -1,4 +1,8 @@
 .site-header {
+    background: #fff;
+    z-index: 1;
+    position: relative;
+
     .top-header {
         height: 40px;
         display: flex;
@@ -137,6 +141,8 @@
             align-items: center;
 
             >li {
+                position: relative;
+
                 >a {
                     text-transform: uppercase;
                     color: #FFFFFF;
@@ -161,6 +167,11 @@
                             transform: translateX(-50%);
                         }
                     }
+
+                }
+
+                &:hover .sub-menu {
+                    display: block;
                 }
 
                 &:last-child {
@@ -168,26 +179,16 @@
                 }
             }
 
-
-
             .ic-menu,
             .ic-home {
                 font-size: 0;
 
             }
 
-            .extend {
-                position: relative;
-
-                &:hover .sub-menu {
-                    display: block;
-                }
-            }
-
             .sub-menu {
                 display: none;
                 position: absolute;
-                top: 38px;
+                top: 40px;
                 width: 150px;
                 background: #fff;
                 z-index: 9999;
@@ -199,6 +200,8 @@
                     font-size: 16px;
                     display: block;
                     transition: all 0.2s;
+                    text-transform: uppercase;
+                    font-family: $font-family-branch;
 
                     &.active,
                     &:hover {
@@ -207,6 +210,41 @@
                     }
                 }
             }
+
+            .extend {
+                position: inherit;
+            }
+        }
+
+        .big-menu {
+            display: none;
+            background: #fff;
+            width: calc(100vw - 17px);
+            left: 0;
+            position: absolute;
+
+            .content {
+                max-width: 1170px;
+                padding: 40px 0 60px;
+                margin: 0 auto;
+            }
+
+            &.show {
+                display: block;
+            }
         }
     }
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 0;
 }
