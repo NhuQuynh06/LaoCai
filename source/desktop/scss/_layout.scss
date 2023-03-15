@@ -1,6 +1,6 @@
 .container {
     width: 1170px !important;
-    max-width: 1170px !important;
+    min-width: 1170px !important;
     margin-right: auto;
     margin-left: auto;
 }
@@ -9,11 +9,21 @@
     margin-top: 20px;
     margin-bottom: 40px;
 
-    .container {
+    >* {
         margin-top: 40px;
 
         &:first-child {
             margin-top: 0;
+        }
+    }
+
+    .container {
+        >* {
+            margin-top: 40px;
+
+            &:first-child {
+                margin-top: 0;
+            }
         }
     }
 }

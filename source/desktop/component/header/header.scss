@@ -1,6 +1,6 @@
 .site-header {
     background: #fff;
-    z-index: 1;
+    z-index: 2;
     position: relative;
 
     .top-header {
@@ -33,6 +33,8 @@
                 font-weight: $font-weight-normal;
                 line-height: 21px;
                 margin-left: 24px;
+                display: flex;
+                align-items: center;
 
                 &:first-child {
                     margin-left: 0;
@@ -133,6 +135,7 @@
 
     .navigation {
         background: $primary;
+        width: 100%;
 
         .menu {
             margin: 0 auto;
@@ -232,6 +235,12 @@
             &.show {
                 display: block;
             }
+        }
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
         }
     }
 }

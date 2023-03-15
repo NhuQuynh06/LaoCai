@@ -3,22 +3,24 @@
 // ----------------------------------
 
 // INFOR : for header
-// var stickyOffset = $('.sticky').offset().top;
-// $(window).scroll(function () {
-//     var sticky = $('.sticky'),
-//         scroll = $(window).scrollTop();
-//     if (scroll >= stickyOffset) sticky.addClass('fixed');
-//     else sticky.removeClass('fixed');
-// });
+var stickyOffset = $('.sticky').offset().top;
+$(window).scroll(function () {
+    var sticky = $('.sticky'),
+        scroll = $(window).scrollTop();
+    if (scroll >= stickyOffset) sticky.addClass('fixed');
+    else sticky.removeClass('fixed');
+});
 
 // INFO : for check gif img
 var img = $(".story .story__thumb img");
 $.each(img, function () {
     var dataSrc = this.dataset.src;
-    if (dataSrc.slice(-4) === ".gif") {
-        $(this).closest("figure").css(
-            "background", "#eee"
-        )
+    if (dataSrc) {
+        if (dataSrc.slice(-4) === ".gif") {
+            $(this).closest("figure").css(
+                "background", "#eee"
+            )
+        }
     }
 });
 
@@ -88,4 +90,15 @@ $(".backdrop").on('click', function () {
         $("body").toggleClass("modal-open");
         $('.backdrop').fadeToggle();
     }, 150);
+});
+
+$('.multimedia .box-content').slick({
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    adaptiveHeight: true,
+    autoplay: false,
 });
