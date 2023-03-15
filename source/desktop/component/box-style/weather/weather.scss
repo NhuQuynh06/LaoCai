@@ -1,0 +1,249 @@
+.weather {
+    .box-heading {
+        margin-bottom: 10px;
+    }
+
+    .title {
+        @include title()
+    }
+
+    .box-content {
+        background: #F8F9FA;
+        border: 1px solid #E9ECEF;
+        border-radius: 8px;
+        padding: 32px 20px;
+
+        >* {
+            margin-top: 30px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+    }
+
+    .left {
+        text-align: center;
+        width: 120px;
+
+        .ic-weather {
+            background: url(../img/weather.png) center center no-repeat;
+            width: 60px;
+            height: 56px;
+            margin: 0 auto 16px;
+        }
+
+        select {
+            margin-bottom: 6px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            line-height: 24px;
+            color: #212529;
+            font-weight: $font-weight-medium;
+            cursor: pointer;
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 17px;
+            color: #ADB5BD;
+            font-weight: $font-weight-normal;
+        }
+    }
+
+    .right {
+        width: 120px;
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+        font-weight: $font-weight-normal;
+
+        >* {
+            display: flex;
+            align-items: center;
+            margin-top: 6px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            >* {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .temperature {
+            font-size: 55px;
+            line-height: 40px;
+            font-weight: $font-weight-semibold;
+            color: #000000;
+            position: relative;
+            margin-bottom: 30px;
+
+            sup {
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: $font-weight-medium;
+                position: absolute;
+                top: -5px;
+                left: 62px;
+            }
+        }
+
+        [class*="ic-"] {
+            margin-right: 4px;
+        }
+
+        .col {
+            p+p {
+                position: relative;
+                padding-left: 28px;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 8px;
+                    height: 1px;
+                    background: #CED4DA;
+                    left: 8px;
+                }
+            }
+        }
+
+    }
+
+    .item {
+        width: 50px;
+        text-align: center;
+
+        >* {
+            margin-top: 12px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .text {
+            background: #E9ECEF;
+            border-radius: 4px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            line-height: 16px;
+            color: #000000;
+            font-weight: $font-weight-medium;
+        }
+
+        .ic-weather {
+            background: url(../img/weather.png) center center/30px no-repeat;
+            width: 30px;
+            margin: 12px auto;
+        }
+
+        .temperature {
+            font-size: 13px;
+            line-height: 16px;
+            color: #000000;
+            font-weight: $font-weight-normal;
+        }
+    }
+
+    .exchange-rate {
+        position: relative;
+        padding-top: 25px;
+        margin-top: 25px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: calc(100% + 40px);
+            height: 1px;
+            top: 0;
+            left: -20px;
+            border-top: 1px solid #E9ECEF;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: $font-weight-semibold;
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+
+    table {
+        width: 100%;
+        max-height: 177px;
+        overflow-X: hidden;
+        overflow-Y: scroll;
+        display: block; // INFO :  style for scroll
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px #fff;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            background-color: #fff;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px #ddd;
+            background-color: #ddd;
+        }
+
+        >* {
+            width: 100%;
+            display: block;
+        }
+
+        td,
+        th {
+            width: 50px;
+            white-space: nowrap;
+
+            &:first-child {
+                width: 60px;
+                padding-left: 10px;
+            }
+        }
+
+        tr {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0 10px;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+            &:first-child {
+                height: 30px;
+                font-size: 14px;
+                font-weight: $font-weight-semibold;
+                background: rgba(255, 243, 205, 0.5);
+                padding: 0;
+                border-bottom: none;
+            }
+        }
+
+        td {
+            font-size: 14px;
+            font-weight: $font-weight-normal;
+            width: 50px;
+            white-space: nowrap;
+
+            &:first-child {
+                width: 60px;
+            }
+        }
+
+    }
+}

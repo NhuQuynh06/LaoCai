@@ -96,3 +96,16 @@ $('.multimedia .box-content').slick({
   speed: 600,
   autoplaySpeed: 10000
 });
+$('.slide .box-content').slick({
+  infinite: true,
+  variableWidth: true,
+  centerMode: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+  adaptiveHeight: true,
+  autoplay: true,
+  speed: 1000,
+  autoplaySpeed: 3000
+});
