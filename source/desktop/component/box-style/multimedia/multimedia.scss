@@ -1,6 +1,7 @@
 .multimedia {
-    background: url(../img/bg-media.png) center center no-repeat;
-    padding: 32px 0 48px;
+    background: url(../img/bg-media.png) center center/1920px no-repeat;
+    padding-bottom: 48px;
+    max-height: 560px;
 
     .wrap-heading {
         padding-bottom: 7px;
@@ -47,14 +48,160 @@
 
             .left {
                 width: 765px;
-                background: lavenderblush;
+
+                .story {
+                    display: flex;
+                    align-items: center;
+
+                    &__thumb {
+                        min-width: 480px;
+                        width: 480px;
+                        height: 340px;
+                        margin-right: 25px;
+                    }
+
+                    &__heading a {
+                        font-size: 30px;
+                        font-weight: $font-weight-semibold;
+                    }
+
+
+                    .row {
+                        display: block;
+                    }
+                }
             }
 
             .right {
                 width: 360px;
                 margin-left: 45px;
-                background: lavenderblush;
+
+                .story {
+                    margin-top: 15px;
+                    padding-top: 15px;
+                    border-top: 1px solid;
+                    border-color: rgba(13, 110, 253, 0.1);
+
+                    &:first-child {
+                        margin-top: 0;
+                        padding-top: 0;
+                        border-top: none;
+                    }
+
+                    &__thumb {
+                        width: 100px;
+                        height: 100px;
+                        float: right;
+                        margin-left: 20px;
+                    }
+
+                    &__heading a {
+                        font-size: 17px;
+                        font-weight: $font-weight-medium;
+                    }
+
+                    &__meta {
+                        margin-top: 4px;
+                    }
+                }
+            }
+
+            .story__meta {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+
+                >* {
+                    display: flex;
+                    align-items: center;
+                }
+
+                [class*="ic-"] {
+                    margin-right: 8px;
+                }
+
+                a {
+                    font-size: 13px;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                    font-weight: $font-weight-medium;
+                }
+
+                .time {
+                    font-size: 13px;
+                    line-height: 24px;
+                    color: #ADB5BD;
+                    font-weight: $font-weight-medium;
+                    position: relative;
+                }
+
+                a+.time {
+                    padding-left: 30px;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background: #ADB5BD;
+                        left: 14px;
+                    }
+                }
             }
         }
+    }
+
+    // style slick-dots
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        bottom: -30px;
+        position: relative;
+        justify-content: center;
+
+        >* {
+            width: 8px;
+            height: 8px;
+            background: #1AA179;
+            opacity: 0.2;
+            border-radius: 50%;
+            margin-left: 12px;
+            transition: all 0.5s;
+            font-size: 0;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &.slick-active {
+                background: #1AA179;
+                transform: scale(1.8);
+            }
+
+            >* {
+                width: 8px;
+                height: 8px;
+                background: #1AA179;
+                opacity: 0.2;
+                border-radius: 50%;
+            }
+
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        bottom: -39px;
+        z-index: 1;
+    }
+
+    .slick-prev {
+        left: calc(50% - 131px);
+    }
+
+    .slick-next {
+        right: calc(50% - 131px);
     }
 }

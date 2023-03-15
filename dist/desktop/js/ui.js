@@ -90,7 +90,9 @@ $('.multimedia .box-content').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
-  dots: false,
+  dots: true,
   adaptiveHeight: true,
-  autoplay: false
+  autoplay: true,
+  speed: 600,
+  autoplaySpeed: 10000
 });

@@ -12,18 +12,53 @@
             </div>
         </div>
         <div class="box-content">
-            <div class="item">
-                <div class="left">asdasd</div>
-                <div class="right">360px</div>
-            </div>
-            <div class="item">
-                <div class="left">asdasd</div>
-                <div class="right">360px</div>
-            </div>
-            <div class="item">
-                <div class="left">asdasd</div>
-                <div class="right">360px</div>
-            </div>
+            @@for (var i = 0; i < 5; i++) {
+                <div class="item">
+                    <div class="left">
+                        <article class="story">
+                            <figure class="story__thumb">
+                                <a href="" title=""> <img src="https://source.unsplash.com/random/480x340?sig=1"
+                                        alt="480x340 (3x2)"></a>
+                            </figure>
+                            <div class="row">
+                                <h5 class="story__heading">
+                                    <a href="#">
+                                        Cristiano Ronaldo nỗ lực tập luyện, quyết tâm phá dớp 'tịt ngòi'
+                                    </a>
+                                </h5>
+                                <div class="story__meta">
+                                    <a href="">
+                                        <i class="ic-podcast"></i>
+                                        podcast
+                                    </a>
+                                    <time class="time"> 15/03/2023 11:02 </time>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="right">
+                        @@for (var i = 0; i < 3; i++) { <article class="story">
+                            <figure class="story__thumb">
+                                <a href="" title=""> <img src="https://source.unsplash.com/random/100x100?sig=1"
+                                        alt="100x100 (1:1)"></a>
+                            </figure>
+                            <h5 class="story__heading">
+                                <a href="#">
+                                    Khởi tố nhân viên trạm y tế bắt giữ người trái pháp luật để đòi nợ Lorem ipsum dolor sit amet
+                                </a>
+                            </h5>
+                            <div class="story__meta">
+                                <a href="">
+                                    <i class="ic-podcast"></i>
+                                    podcast
+                                </a>
+                                <time class="time"> 15/03/2023 11:02 </time>
+                            </div>
+                            </article>
+                            }
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </div>
