@@ -1,5 +1,6 @@
 .longform {
-    max-width: 822px !important;
+    width: 822px;
+    min-width: 822px;
     margin: -20px auto 0;
 
     .article {

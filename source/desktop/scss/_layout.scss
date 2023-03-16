@@ -1,6 +1,6 @@
 .container {
-    width: 1170px !important;
-    min-width: 1170px !important;
+    width: 1170px;
+    min-width: 1170px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -14,6 +14,10 @@
 
         &:first-child {
             margin-top: 0;
+        }
+
+        &:nth-child(2) {
+            margin-top: 20px;
         }
     }
 
