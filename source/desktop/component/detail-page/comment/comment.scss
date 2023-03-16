@@ -2,43 +2,93 @@
     margin-top: 32px !important;
 
 
-    .heading {
-
-        font-weight: $font-weight-bold;
-        font-size: 30px;
+    .title {
+        font-size: 25px;
         line-height: 37px;
         text-transform: uppercase;
-        
+        color: #000000;
+        font-weight: $font-weight-normal;
+        text-transform: uppercase;
+        font-family: $font-family-branch;
+    }
 
-        &:hover {
-            color: $primary !important;
+
+
+    .box-content {
+        margin-top: 24px;
+
+        .wrap-comment {
+            width: 100%;
+
+            .d-flex {
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .col {
+                font-size: 15px;
+                line-height: 20px;
+                color: #6C757D;
+                font-weight: $font-weight-medium;
+                display: flex;
+                align-items: center;
+
+                >* {
+                    margin-left: 12px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+
+                .col {
+
+                    >* {
+                        min-width: 30px;
+                        height: 30px;
+                        border-radius: 15px;
+                        margin-left: 6px;
+                        display: flex;
+                        align-items: center;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+
+                a {
+                    font-weight: $font-weight-medium;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #032B82;
+                }
+            }
+
+            .fb {
+                background: #3b5998 url(../img/fb.png) center center/10px no-repeat;
+            }
+
+            .zl {
+                background: red url(../img/yt.png) center center/17px no-repeat;
+            }
+
+            .mail {
+                background: #6C757D url(../img/mail.png) center center/16px no-repeat;
+            }
         }
     }
 
     textarea {
-
-
-        font-weight: $font-weight-semibold;
-        font-size: 14px;
+        background: #f8f9fa;
+        padding: 12px 16px;
+        font-weight: 400;
+        font-size: 15px;
         line-height: 20px;
         color: #6c757d;
-        background: #ffffff;
-        border: 1px solid #cccccc;
+        border: none;
         width: 100%;
-        padding: 12px 16px;
-    }
-
-    .box-content {
-        margin-top: 24px !important;
-
-        .wrap-comment {
-            // display: flex;
-            width: 100%;
-
-            .wrap {
-                width: 100%;
-            }
-        }
     }
 
     .wrap-login {
@@ -171,15 +221,13 @@
     }
 
     .btn-Submit {
-        width: 119px;
-        height: 29px;
-        padding: 4px 16px;
+        border-radius: 8px;
+        padding: 8px 20px 8px 46px;
         font-weight: $font-weight-normal;
-        font-size: 13px;
-        line-height: 165%;
-        background: #e21f26;
-        border-radius: 6px;
-        color: #ffffff;
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff;
+        background: #dc3545 url(../img/comment.png) center left 20px no-repeat;
     }
 
     .sub-comments {
@@ -224,34 +272,29 @@
             width: 100%;
 
             .info-author {
-
-
-                font-weight: $font-weight-medium;
+                font-weight: $font-weight-semibold;
                 font-size: 18px;
                 line-height: 22px;
-                
+                color: #212529;
                 float: left;
+                margin-bottom: 12px;
             }
 
             .time {
-
-
                 font-weight: $font-weight-medium;
                 font-size: 12px;
                 line-height: 22px;
                 text-align: right;
                 color: #999999;
                 float: right;
-                width: 150px;
             }
 
             .text {
-
-
-                font-weight: $font-weight-medium;
-                font-size: 14px;
-                line-height: 20px;
-                
+                margin-top: 12px;
+                font-weight: $font-weight-normal;
+                font-size: 15px;
+                line-height: 23px;
+                color: #212529;
                 clear: both;
             }
         }
@@ -274,9 +317,7 @@
             }
 
             .btnLike {
-                &.active {
-                    
-                }
+                &.active {}
             }
 
             i {
@@ -300,12 +341,9 @@
     }
 
     .btn.btn-link {
-        background: #e21f26;
+        background: $primary;
         border-radius: 6px;
         padding: 8px 12px;
-
-
-        font-weight: $font-weight-medium;
         font-size: 16px;
         line-height: 20px;
         text-transform: uppercase;
@@ -330,22 +368,13 @@
 
     // .btn-Submit,
     .btnSubmit {
-        min-width: 152px;
-        height: 36px;
-        background: #e21f26;
         border-radius: 8px;
-        padding: 8px 18px;
-
-
+        padding: 8px 20px 8px 46px;
         font-weight: $font-weight-medium;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 15px;
+        line-height: 18px;
         text-transform: uppercase;
-        color: #ffffff;
-        margin-right: 4px;
-    }
-
-    .btnSubmit {
-        float: right;
+        color: #FFFFFF;
+        background: #DC3545 url(../img/comment.png) center left 20px no-repeat;
     }
 }

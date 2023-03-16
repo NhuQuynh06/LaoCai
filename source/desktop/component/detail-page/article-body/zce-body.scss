@@ -3,6 +3,9 @@
 // ----------------------------------
 .article__body,
 .zce-content-body {
+    font-size: 19px;
+    line-height: 28px;
+
     >* {
         margin-bottom: 16px;
 
@@ -64,27 +67,27 @@
     }
 
     h1 {
-        font-size: 22px;
+        font-size: 27px;
         font-weight: bold;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 25px;
         font-weight: bold;
     }
 
     h3 {
-        font-size: 18px;
+        font-size: 23px;
         font-weight: bold;
     }
 
     h4 {
-        font-size: 16px;
+        font-size: 21px;
         font-weight: bold;
     }
 
     h5 {
-        font-size: 14px;
+        font-size: 19px;
         font-weight: bold;
     }
 
@@ -135,14 +138,13 @@
         }
 
         .caption {
-            font-weight: 500;
-            margin-top: 8px;
-            font-size: 16px;
-            line-height: 24px;
-            color: #343a40;
-            display: block;
+            font-size: 14px;
+            line-height: 21px;
+            color: #6C757D;
             text-align: center;
-            font-style: normal;
+            margin-top: 8px;
+            display: block;
+            font-weight: $font-weight-normal;
 
             >* {
                 margin-top: 0;
@@ -305,99 +307,6 @@
 }
 
 // ----------------------------------
-// INFO : be changed
-// ----------------------------------
-blockquote {
-    padding: 30px 24px;
-    margin: 10px 16px 20px;
-    position: relative;
-    border: 1px solid $primary;
-
-    &::before {
-        position: absolute;
-        content: "";
-        display: block;
-        background: url(../img/quote.png) center center/32px no-repeat;
-        position: absolute;
-        background-color: #fff;
-        width: 50px;
-        height: 50px;
-        left: 0;
-        top: 5px;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.poll-box {
-    padding: 16px 20px;
-    background: $gray-100;
-
-    .box-heading-line {
-        font-size: 16px;
-        color: $primary;
-        margin-bottom: 16px;
-
-        &:after {
-            background: $gray-400;
-        }
-
-        * {
-            background: $gray-100;
-        }
-    }
-
-    .box-content {
-        margin-bottom: 0;
-
-        .desc {
-            font-size: 16px;
-            margin-bottom: 12px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        span {
-            font-size: 16px;
-            color: $gray-900;
-            display: inline-block;
-        }
-
-        .wrap-button {
-            display: flex;
-            justify-content: flex-start;
-            width: calc(100%);
-            margin: 12px 0 0;
-
-            button {
-                font-size: 14px;
-                color: $gray-600;
-                margin-right: 8px;
-                width: 90px;
-                height: 30px;
-                box-shadow: none;
-            }
-
-            .btn-primary,
-            .btn-send {
-                font-size: 13px;
-                color: $white;
-                font-weight: 500;
-                text-transform: uppercase;
-                background: $primary;
-
-                &:hover {
-                    text-decoration: none;
-                    background: $secondary;
-                }
-            }
-        }
-    }
-}
-
-// ----------------------------------
 // INFO : style for detail-page
 // ----------------------------------
 .detail .zce-content-body {
@@ -428,4 +337,126 @@ blockquote {
             left: 0;
         }
     }
+}
+
+// ----------------------------------
+// INFO : be changed
+// ----------------------------------
+.zce-content-body {
+    blockquote {
+        padding: 144px 60px 60px;
+        background: url(../img/quote.png) top 50px center/61px no-repeat;
+        font-weight: $font-weight-semibold;
+        font-size: 22px;
+        line-height: 31px;
+
+        .author {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #343A40;
+            font-weight: $font-weight-normal;
+            display: block;
+            padding-left: 42px;
+            text-align: center;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 30px;
+                height: 1px;
+                background: #212529;
+                right: calc(50% + 42px);
+                top: calc(50% - 1px);
+            }
+        }
+    }
+
+    .notebox {
+        background: #FFF3CD;
+        border: 2px dashed #FFC107;
+        border-radius: 8px;
+        padding: 24px;
+    }
+
+    .poll-box {
+        background: #FFFFFF;
+        box-shadow: 1px 0px 50px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: block;
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        .box-heading {
+            >* {
+                font-weight: 400;
+                font-size: 14px;
+                color: #343A40;
+            }
+        }
+
+        .box-content {
+            margin-top: 15px;
+
+            .desc {
+                font-weight: 500;
+                font-size: 19px;
+            }
+
+            label {
+                cursor: pointer;
+                background: #F8F9FA;
+                border-radius: 4px;
+                padding: 12px;
+                display: block;
+                margin-top: 8px;
+                font-weight: $font-weight-normal;
+                font-size: 16px;
+                line-height: 20px;
+
+                input {
+                    margin-right: 12px;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .wrap-button {
+            margin-top: 15px;
+
+            >* {
+                min-width: 127px;
+                height: 32px;
+                padding: 6px 32px;
+                border-radius: 6px;
+                font-weight: $font-weight-medium;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .btn-send {
+                background: #DC3545;
+                color: #fff;
+            }
+
+            .btn-see {
+                background: #fff;
+                color: #000000;
+            }
+        }
+
+        &.outset-left {
+            margin-right: 40px !important;
+
+        }
+
+        &.outset-right {
+            margin-left: 40px !important;
+        }
+    }
+
 }

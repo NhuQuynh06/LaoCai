@@ -92,3 +92,28 @@ a:hover {
         background: url(../img/top-decor.png) center top/1170px no-repeat;
     }
 }
+
+.box-heading {
+    .title {
+        transition: all 0.3s;
+
+        &:hover {
+            color: $primary !important;
+        }
+    }
+}
+
+.more-news {
+    background: #DC3545;
+    border: 1px solid #E9ECEF;
+    border-radius: 6px;
+    padding: 12px 70px;
+    font-weight: $font-weight-medium;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px
+}
