@@ -16,8 +16,8 @@
 
     &__title {
         font-weight: $font-weight-semibold;
-        font-size: 50px;
-        line-height: 60px;
+        font-size: 36px;
+        line-height: 48px;
         color: #212529;
     }
 
@@ -40,6 +40,10 @@
 
             [class*="ic-"] {
                 margin-right: 10px;
+
+                &::before {
+                    font-size: 24px;
+                }
             }
         }
 
