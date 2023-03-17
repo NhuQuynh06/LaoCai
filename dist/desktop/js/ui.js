@@ -86,20 +86,25 @@ btn.on('click', function (e) {
 // ----------------------------------
 // INFO : Js for project, be changed
 // ----------------------------------
+// style header
 $("body").append("<div class='backdrop'></div>");
 $(".extend .ic-menu").click(function (e) {
   e.preventDefault();
   $(".big-menu").fadeToggle("show");
   $("body").toggleClass("modal-open");
   $('.backdrop').fadeToggle();
+  $(".navigation.sticky.fixed").toggleClass("w");
 });
 $(".backdrop").on('click', function () {
   setTimeout(function () {
     $(".big-menu").fadeToggle("show");
     $("body").toggleClass("modal-open");
     $('.backdrop').fadeToggle();
+    $(".navigation.sticky.fixed").toggleClass("w");
   }, 150);
 });
+
+// slick slider
 $('.multimedia .box-content').slick({
   infinite: true,
   variableWidth: true,

@@ -23,7 +23,7 @@
 
             >* {
                 display: flex;
-                align-items: center;
+                align-items: end;
                 font-size: 15px;
                 line-height: 24px;
                 font-weight: $font-weight-medium;
@@ -36,9 +36,31 @@
 
                 [class^=ic-] {
                     margin-right: 12px;
+
+                    &::before {
+                        font-size: 30px;
+                    }
+
                 }
+
             }
         }
+    }
+
+    .ic-tivi {
+        color: #212529;
+    }
+
+    .ic-podcast {
+        color: #198754;
+    }
+
+    .ic-e-ma {
+        color: #0D6EFD;
+    }
+
+    .ic-img {
+        color: #FFC107;
     }
 
     .box-content {
@@ -193,15 +215,33 @@
     .slick-prev,
     .slick-next {
         position: absolute;
-        bottom: -39px;
+        bottom: -5px;
         z-index: 1;
+        font-size: 0;
+        color: #1AA179;
+        opacity: 0.2;
+
+        &::before {
+            font-size: 30px;
+            font-family: "icomoon";
+        }
     }
 
     .slick-prev {
         left: calc(50% - 131px);
+
+        &::before {
+            position: absolute;
+            content: "\e90b";
+        }
     }
 
     .slick-next {
         right: calc(50% - 131px);
+
+        &::before {
+            position: absolute;
+            content: "\e915";
+        }
     }
 }

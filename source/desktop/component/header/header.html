@@ -3,12 +3,12 @@
         <div class="top-header">
             <div class="left">
                 <a href=""><i class="ic-phone"></i> Hotline: 3462 623 784</a>
-                <a href=""><i class="ic-phone"></i> Mail gửi tòa soạn</a>
-                <a href=""><i class="ic-phone"></i> Liên hệ quảng cáo</a>
-                <a href=""><i class="ic-phone"></i>
-                    <span>English</span>
-                    <span>China</span>
-                </a>
+                <a href=""><i class="ic-mail"></i> Mail gửi tòa soạn</a>
+                <a href=""><i class="ic-promo"></i> Liên hệ quảng cáo</a>
+                <div class="col"><i class="ic-lang"></i>
+                    <a href="">English</a>
+                    <a href=""> China</a>
+                </div>
             </div>
             <div class="right">
                 <div class="social">
@@ -75,9 +75,29 @@
                 <a href="" class="ic-menu">extend</a>
                 <div class="big-menu">
                     <div class="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quidem. Odit, veritatis sapiente,
-                        et repellendus illo maiores nam, distinctio aliquam corrupti reprehenderit similique non in
-                        possimus? Iure, assumenda officiis. Nemo.
+                        @@for (var i = 0; i < 4; i++) {
+                            <ul class="item">
+                                <li><a href="" class="title">chính trị</a></li>
+                                <li><a href="">Xây dựng đảng</a></li>
+                                <li><a href="">Lorem, ipsum dolor.</a></li>
+                                <li><a href="">Lorem, ipsum dolor.</a></li>
+                                <li><a href="">Lorem, ipsum</a></li>
+                                <li><a href="">Lorem, ipsum</a></li>
+                            </ul>
+                        }
+                        @@for (var i = 0; i < 4; i++) {
+                            <ul class="item">
+                                <li><a href="" class="title">chính trị</a></li>
+                            </ul>
+                        }
+                        @@for (var i = 0; i < 5; i++) {
+                            <ul class="item">
+                                <li><a href="" class="title">chính trị</a></li>
+                                <li><a href="">Xây dựng đảng</a></li>
+                                <li><a href="">Lorem, ipsum</a></li>
+                                <li><a href="">Lorem, ipsum</a></li>
+                            </ul>
+                        }
                     </div>
                 </div>
             </li>
