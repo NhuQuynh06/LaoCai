@@ -40,6 +40,14 @@
         &:hover {
             color: $primary !important;
         }
+
+        i {
+            font-size: inherit;
+
+            &::before {
+                font-size: inherit;
+            }
+        }
     }
 
     &__summary {

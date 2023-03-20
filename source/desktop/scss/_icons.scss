@@ -1,40 +1,47 @@
 //  icon bài viết (dùng bằng ảnh)
 [class^=ic-type-] {
-    position: relative;
-    top: 4px;
-    margin-left: 5px;
-    width: 20px;
-    height: 20px;
     display: inline-block !important;
 }
 
 .ic-type-img {
-    background: url(../img/ic-img.png) center center/20px no-repeat;
-}
 
-.ic-type-interview {
-    background: url(../img/ic-interview.png) center center/20px no-repeat;
+    &::before {
+        content: "\e91b";
+    }
 }
 
 .ic-type-video {
-    background: url(../img/ic-video.png) center center/20px no-repeat;
-}
 
-.ic-type-longform {
-    background: url(../img/ic-longform.png) center center/20px no-repeat;
-}
-
-.ic-type-info {
-    background: url(../img/ic-info.png) center center/20px no-repeat;
-}
-
-.ic-type-live {
-    background: url(../img/ic-live.png) center center/20px no-repeat;
+    &::before {
+        content: "\e91c";
+    }
 }
 
 .ic-type-audio {
-    background: url(../img/ic-audio.png) center center/20px no-repeat;
+
+    &::before {
+        content: "\e900";
+    }
 }
+
+.ic-type-interview,
+.ic-type-info,
+.ic-type-live,
+.ic-type-longform {
+    font-family: $font-family-sans-serif !important;
+    font-weight: $font-weight-semibold !important;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    text-transform: uppercase !important;
+    text-align: center;
+    color: #E9ECEF;
+    background: #DC3545;
+    border-radius: 4px;
+    padding: 2px 12px;
+    width: fit-content;
+    height: 24px;
+}
+
 
 // icomoon  
 @font-face {
@@ -60,7 +67,7 @@
 [class^="ic-"],
 [class*=" ic-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'icomoon';
     speak: never;
     font-style: normal;
     font-weight: normal;
