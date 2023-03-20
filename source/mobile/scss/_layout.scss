@@ -1,0 +1,63 @@
+.container {
+    width: 1170px;
+    min-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site-body {
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    >* {
+        margin-top: 40px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:nth-child(2) {
+            margin-top: 30px;
+        }
+    }
+
+    .container {
+        >* {
+            margin-top: 40px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+// layout detail-page
+.col {
+    display: flex;
+    justify-content: space-between;
+
+    .main-col {
+        width: 780px;
+
+        >* {
+            margin-top: 30px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .sub-col {
+        width: 330px;
+
+        >* {
+            margin-top: 30px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}

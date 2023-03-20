@@ -1,0 +1,345 @@
+// style layout
+// style for detail page
+
+@mixin classOutsetLeftRightDetail {
+
+    &.outset-left {
+        margin-left: auto;
+    }
+
+    &.outset-right {
+        margin-right: auto;
+    }
+}
+
+@mixin maxWidthFullWiwthDetail {
+
+    &.full-width,
+    &.max-width {
+        width: 100%;
+    }
+
+}
+
+// style table in side blockquote, notebox
+@mixin table {
+    table {
+
+        &.full-width,
+        &.max-width {
+            width: 100%;
+        }
+    }
+
+    @include tableNotBorder();
+
+}
+
+@mixin space {
+    >* {
+        margin-top: 16px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+@mixin tableNotBorder {
+
+    td,
+    th {
+        padding: 0;
+        border: none;
+    }
+}
+
+@mixin classLeftRight {
+
+    &.align-left {
+        width: 50%;
+        float: left;
+        margin-right: 16px;
+        margin-bottom: 16px;
+    }
+
+    &.align-right {
+        width: 50%;
+        float: right;
+        margin-left: 16px;
+        margin-bottom: 16px;
+    }
+
+}
+
+@mixin maxWidth {
+    &.max-width {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100vw - 17px);
+        max-width: 1300px;
+    }
+}
+
+@mixin alignLeftRight {
+    &[align="center"] {
+        width: 100%;
+        @include tableNotBorder();
+        text-align: left;
+    }
+
+    &[align="left"] {
+        width: 50%;
+        float: right;
+        margin-left: 16px;
+        margin-bottom: 16px;
+        @include tableNotBorder();
+        text-align: left;
+    }
+
+    &[align="right"] {
+        width: 50%;
+        float: left;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        @include tableNotBorder();
+        text-align: left;
+    }
+}
+
+
+
+.zce-content-body {
+    table {
+
+        td,
+        th {
+            padding: 0;
+        }
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        width: auto;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .caption {
+        font-size: 14px;
+        line-height: 21px;
+        color: #6C757D;
+        text-align: center;
+        margin-top: 8px;
+        display: block;
+        font-weight: $font-weight-normal;
+
+        >* {
+            margin-top: 0;
+        }
+    }
+
+    //stle table defaut 
+    table:not([class]) {
+        width: 100%;
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid #E9ECEF;
+        }
+    }
+
+    figure,
+    table,
+    blockquote,
+    .notebox,
+    .poll-box {
+        @include classLeftRight();
+        @include alignLeftRight();
+        @include maxWidth();
+    }
+
+    blockquote,
+    .notebox {
+        @include space();
+        @include table();
+    }
+
+    .live-zone,
+    .interview-zone {
+        table {
+            @include maxWidthFullWiwthDetail();
+            @include classOutsetLeftRightDetail();
+        }
+    }
+}
+
+// for detail-page
+.detail {
+    .zce-content-body {
+
+        figure,
+        table,
+        blockquote,
+        .notebox,
+        .poll-box {
+            @include classOutsetLeftRightDetail();
+        }
+
+        table {
+            @include maxWidthFullWiwthDetail();
+        }
+    }
+}
+
+// style global
+.zce-content-body {
+
+    ul {
+        li {
+
+            color: $primary;
+            padding-left: 18px;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: #343A40;
+                top: 12px;
+                left: 0;
+                font-size: 15px;
+            }
+
+            &:hover {
+                &:before {
+                    background: $primary;
+                }
+            }
+
+        }
+    }
+
+
+    blockquote {
+        padding: 144px 60px 60px;
+        background: url(../img/quote.png) top 50px center/61px no-repeat;
+        font-weight: $font-weight-semibold;
+        font-size: 22px;
+        line-height: 31px;
+
+        .author {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #343A40;
+            font-weight: $font-weight-normal;
+            display: block;
+            padding-left: 42px;
+            text-align: center;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 30px;
+                height: 1px;
+                background: #212529;
+                right: calc(50% + 42px);
+                top: calc(50% - 1px);
+            }
+        }
+    }
+
+    .notebox {
+        background: #FFF3CD;
+        border: 2px dashed #FFC107;
+        border-radius: 8px;
+        padding: 24px;
+    }
+
+    .poll-box {
+        background: #FFFFFF;
+        box-shadow: 1px 0px 50px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: block;
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        .box-heading {
+            >* {
+                font-weight: 400;
+                font-size: 14px;
+                color: #343A40;
+            }
+        }
+
+        .box-content {
+            margin-top: 15px;
+
+            .desc {
+                font-weight: 500;
+                font-size: 19px;
+            }
+
+            label {
+                cursor: pointer;
+                background: #F8F9FA;
+                border-radius: 4px;
+                padding: 12px;
+                display: block;
+                margin-top: 8px;
+                font-weight: $font-weight-normal;
+                font-size: 16px;
+                line-height: 20px;
+
+                input {
+                    margin-right: 12px;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .wrap-button {
+            margin-top: 15px;
+
+            >* {
+                min-width: 127px;
+                height: 32px;
+                padding: 6px 32px;
+                border-radius: 6px;
+                font-weight: $font-weight-medium;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .btn-send {
+                background: #DC3545;
+                color: #fff;
+            }
+
+            .btn-see {
+                background: #fff;
+                color: #000000;
+            }
+        }
+
+        &.outset-left {
+            margin-right: 40px !important;
+
+        }
+
+        &.outset-right {
+            margin-left: 40px !important;
+        }
+    }
+}

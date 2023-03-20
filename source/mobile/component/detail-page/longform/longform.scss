@@ -1,0 +1,57 @@
+.longform {
+    width: 822px;
+    min-width: 822px;
+    margin: -30px auto 0 !important;
+
+    .article {
+
+        // INFO : style for table longform
+        >table.picture,
+        >table.video {
+            position: relative;
+            transform: translateX(-50%);
+            left: 50%;
+            width: max-content;
+            margin: inherit;
+            max-width: 822px;
+
+            &.full-width {
+                max-width: calc(100vw - 17px);
+            }
+
+            &.max-width {
+                max-width: 1600px;
+
+                @media (max-width: 1600px) {
+                    max-width: calc(100vw - 17px);
+
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .caption {
+                font-size: 14px;
+                line-height: 21px;
+                color: #6c757d;
+                text-align: center;
+                margin-top: 8px;
+                display: block;
+                font-weight: $font-weight-normal;
+                text-align: center;
+                max-width: 822px;
+                margin: 8px auto 0;
+
+                >* {
+                    margin-top: 5px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
