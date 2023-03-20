@@ -76,6 +76,23 @@
     justify-content: center;
 }
 
+
+.ic-down1:before {
+    content: "\e919";
+}
+
+.ic-up:before {
+    content: "\e91e";
+}
+
+.ic-eye:before {
+    content: "\e91f";
+}
+
+.ic-down3:before {
+    content: "\e920";
+}
+
 .ic-search:before {
     content: "\e91d";
 }
@@ -92,7 +109,7 @@
     content: "\e900";
 }
 
-.ic-reply:before {
+.ic-back:before {
     content: "\e901";
 }
 
@@ -162,7 +179,7 @@
 
 .ic-podcast:before {
     content: "\e912";
-}
+}.ic-
 
 .ic-promo:before {
     content: "\e913";
@@ -186,10 +203,6 @@
 
 .ic-top:before {
     content: "\e918";
-}
-
-.ic-up:before {
-    content: "\e919";
 }
 
 .ic-wind:before {

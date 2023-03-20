@@ -7,21 +7,28 @@
 // INFOR : for header
 $('.site-header .hamburger').click(function () {
   $('.search-wrapper').css('display', 'none');
-  $('.navigation').slideToggle();
+  $('.navigation').slideToggle("slow");
   $('body').toggleClass('no-scroll');
 });
 $('.site-header .wrap-search').click(function () {
   $('.navigation').css('display', 'none');
-  $('.search-wrapper').slideToggle();
+  $('.search-wrapper').slideToggle("slow");
   $('body').toggleClass('no-scroll');
 });
 $('.navigation .mask').click(function () {
-  $('.navigation').slideToggle();
+  $('.navigation').slideToggle("slow");
   $('body').toggleClass('no-scroll');
 });
 $('.search-wrapper .mask').click(function () {
-  $('.search-wrapper').slideToggle();
+  $('.search-wrapper').slideToggle("slow");
   $('body').toggleClass('no-scroll');
+});
+$('.navigation .ic-down1').click(function (e) {
+  e.preventDefault();
+  $(e.target).toggleClass("ic-up");
+  var parent = $(e.target).parent();
+  var subMenu = parent.siblings()[0];
+  $(subMenu).slideToggle("");
 });
 
 // INFO : for check gif img

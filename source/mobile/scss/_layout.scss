@@ -1,29 +1,23 @@
 .container {
-    width: 1170px;
-    min-width: 1170px;
+    max-width: 540px;
     margin-right: auto;
     margin-left: auto;
 }
 
 .site-body {
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 20px;
 
     >* {
-        margin-top: 40px;
+        margin-top: 20px;
 
         &:first-child {
             margin-top: 0;
-        }
-
-        &:nth-child(2) {
-            margin-top: 30px;
         }
     }
 
     .container {
         >* {
-            margin-top: 40px;
+            margin-top: 20px;
 
             &:first-child {
                 margin-top: 0;
@@ -36,28 +30,4 @@
 .col {
     display: flex;
     justify-content: space-between;
-
-    .main-col {
-        width: 780px;
-
-        >* {
-            margin-top: 30px;
-
-            &:first-child {
-                margin-top: 0;
-            }
-        }
-    }
-
-    .sub-col {
-        width: 330px;
-
-        >* {
-            margin-top: 30px;
-
-            &:first-child {
-                margin-top: 0;
-            }
-        }
-    }
 }
