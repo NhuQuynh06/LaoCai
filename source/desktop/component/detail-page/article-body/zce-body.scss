@@ -198,6 +198,34 @@
 // style global
 .zce-content-body {
 
+    ul {
+        li {
+
+            color: $primary;
+            padding-left: 18px;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: #343A40;
+                top: 12px;
+                left: 0;
+                font-size: 15px;
+            }
+
+            &:hover {
+                &:before {
+                    background: $primary;
+                }
+            }
+
+        }
+    }
+
     blockquote,
     .notebox,
     .poll-box {

@@ -30,7 +30,7 @@
         .ic-weather {
             background: url(../img/weather.png) center center no-repeat;
             width: 60px;
-            height: 56px;
+            min-height: 56px;
             margin: 0 auto 16px;
         }
 
@@ -73,6 +73,29 @@
                 display: flex;
                 align-items: center;
             }
+
+            .ic-up,
+            .ic-down2 {
+                &::before {
+                    font-size: 24px;
+                }
+            }
+
+            .ic-up {
+                color: #DC3545;
+            }
+
+            .ic-down2 {
+                color: #198754;
+            }
+
+            .ic-droplet {
+                color: #0D6EFD;
+            }
+
+            .ic-wind {
+                color: #212529;
+            }
         }
 
         .temperature {
@@ -108,7 +131,7 @@
                     width: 8px;
                     height: 1px;
                     background: #CED4DA;
-                    left: 8px;
+                    left: 12px;
                 }
             }
         }
@@ -143,6 +166,7 @@
         .ic-weather {
             background: url(../img/weather.png) center center/30px no-repeat;
             width: 30px;
+            min-height: 56px;
             margin: 12px auto;
         }
 
