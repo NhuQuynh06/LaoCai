@@ -18,8 +18,18 @@
   @@include('../component/header/header.html')
 
   <!-- site body -->
-  <div class="site-">
-    <div class=""></div>
+  <div class="site-body">
+    <div class="container">
+      @@include('../component/box-style/abf-homepage/abf-homepage.html')
+      @@include('../component/box-style/timeline/timeline.html')
+      @@include('../component/box-style/topics/topics.html')
+      @@include('../component/box-style/multimedia/multimedia.html')
+      @@for (var i = 0; i < 3; i++) {
+        @@include('../component/box-style/story/story.html')
+      }
+      @@include('../component/box-style/slide/slide.html')
+      @@include('../component/box-style/local-news/local-news.html')
+    </div>
   </div>
   <div class="back-to-top"></div>
   <!-- site footer -->

@@ -34,74 +34,6 @@ a:hover {
     }
 }
 
-.site-body {
-    >.social {
-        position: fixed;
-        right: 30px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #FFFFFF;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        width: 60px;
-        height: 234px;
-        padding: 24px 12px;
-        z-index: 1;
-
-        >* {
-            display: block;
-            margin: 0 auto;
-            margin-top: 30px;
-            font-size: 0;
-
-            &:first-child {
-                margin-top: 0;
-            }
-        }
-
-        .fb {
-            width: 17px;
-            height: 26px;
-            background: url(../img/fb_v2.png) center center/17px no-repeat;
-        }
-
-        .yt {
-            width: 30px;
-            height: 26px;
-            background: url(../img/yt_v2.png) center center/30px no-repeat;
-        }
-
-        .zl {
-            width: 35px;
-            height: 18px;
-
-            background: url(../img/zl_v2.png) center center/35px no-repeat;
-        }
-
-        .tw {
-            width: 26px;
-            height: 26px;
-            background: url(../img/tw.png) center center/26px no-repeat;
-        }
-    }
-}
-
-.category {
-    .col {
-        padding-top: 70px;
-        background: url(../img/top-decor.png) center top/1170px no-repeat;
-    }
-}
-
-.box-heading {
-    .title {
-        transition: all 0.3s;
-
-        &:hover {
-            color: $primary !important;
-        }
-    }
-}
 
 .more-news {
     background: #DC3545;
@@ -116,19 +48,4 @@ a:hover {
     display: flex;
     margin: 0 auto;
     margin-top: 50px
-}
-
-.podcast {
-
-    .box-comment,
-    .article__tag {
-        width: 810px;
-        margin: 40px auto 0;
-    }
-}
-
-.detail {
-    .breadcrumbs+.col {
-        margin-top: 20px;
-    }
 }

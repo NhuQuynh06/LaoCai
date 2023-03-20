@@ -1,5 +1,9 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 // ----------------------------------
 // INFO : Unchangeable
 // ----------------------------------
@@ -100,4 +104,31 @@ btn.on('click', function (e) {
   $('html, body').animate({
     scrollTop: 0
   }, '300');
+});
+
+// ----------------------------------
+// INFO : Js for project, be changed
+// ----------------------------------
+
+$('.topics').slick(_defineProperty({
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  centerMode: true,
+  speed: 1000,
+  autoplaySpeed: 8000,
+  arrows: false
+}, "dots", false));
+$('.slide .box-content').slick({
+  infinite: true,
+  variableWidth: true,
+  centerMode: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+  adaptiveHeight: true,
+  autoplay: true,
+  speed: 1000,
+  autoplaySpeed: 3000
 });

@@ -36,6 +36,10 @@
         display: block;
         transition: 0.5s;
         overflow: hidden;
+        font-weight: $font-weight-medium;
+        font-size: 18px;
+        line-height: 26px;
+        color: #212529;
 
         &:hover {
             color: $primary !important;

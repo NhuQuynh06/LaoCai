@@ -1,0 +1,28 @@
+.timeline {
+    .story {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid #E9ECEF;
+
+        &:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        &__thumb {
+            width: 33%;
+            float: left;
+            margin-right: 16px;
+            height: 20vw;
+            max-height: 112px;
+        }
+
+        &__heading a {
+            font-weight: $font-weight-medium;
+            font-size: 18px;
+            line-height: 26px;
+            color: #212529;
+        }
+    }
+}

@@ -109,4 +109,32 @@ btn.on('click', function (e) {
     $('html, body').animate({ scrollTop: 0 }, '300');
 });
 
+// ----------------------------------
+// INFO : Js for project, be changed
+// ----------------------------------
+
+$('.topics').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    centerMode: true,
+    speed: 1000,
+    autoplaySpeed: 8000,
+    arrows: false,
+    dots: false,
+});
+
+$('.slide .box-content').slick({
+    infinite: true,
+    variableWidth: true,
+    centerMode: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    adaptiveHeight: true,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 3000,
+});
 
