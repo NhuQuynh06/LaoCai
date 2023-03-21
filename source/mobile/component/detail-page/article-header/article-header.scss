@@ -1,6 +1,6 @@
 .article {
     >* {
-        margin-top: 20px;
+        margin-top: 16px;
 
         &:first-child {
             margin-top: 0;
@@ -8,7 +8,7 @@
     }
 
     &__sub-title {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
         color: #343a40;
         text-transform: uppercase;
@@ -16,14 +16,12 @@
 
     &__title {
         font-weight: $font-weight-semibold;
-        font-size: 36px;
-        line-height: 48px;
+        font-size: 24px;
+        line-height: 29px;
         color: #212529;
     }
 
     &__meta {
-        display: flex;
-        align-items: center;
 
         >* {
             height: 20px;
@@ -32,31 +30,35 @@
             font-size: 16px;
             line-height: 23px;
             color: #6C757D;
-            margin-left: 40px;
 
             &:first-child {
-                margin-left: 0;
+                margin-right: 12px;
             }
 
             [class*="ic-"] {
-                margin-right: 10px;
+                margin-right: 4px;
 
                 &::before {
-                    font-size: 24px;
+                    font-size: 22px;
                 }
             }
         }
 
+        .author {
+            float: left;
+        }
+
         iframe {
-            margin-left: auto;
+            clear: both;
+            margin-top: 12px;
         }
     }
 
     &__sapo {
-        font-size: 19px;
         font-weight: $font-weight-semibold;
+        font-size: 19px;
+        line-height: 29px;
         color: #000000;
-        line-height: 28px;
     }
 
 }

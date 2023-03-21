@@ -55,6 +55,12 @@
                 }
 
             }
+
+            &::-webkit-scrollbar {
+                height: 1px;
+                background-color: #fff;
+            }
+
         }
     }
 

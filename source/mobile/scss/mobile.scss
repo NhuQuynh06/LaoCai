@@ -21,7 +21,7 @@
 @import '../component/header/header.scss';
 @import '../component/footer/footer.scss';
 @import '../component/modal/modal.scss';
-// @import '../component/breadcrumbs/breadcrumbs.scss';
+@import '../component/breadcrumbs/breadcrumbs.scss';
 // @import '../component/search-tags/search-tags.scss';
 // @import '../component/error/error.scss';
 // @import '../component/podcast/podcast.scss';
@@ -30,10 +30,10 @@
 // INFO : style for detail-page
 // ----------------------------------
 
-// @import '../component/detail-page/article-header/article-header.scss';
-// @import '../component/detail-page/article-body/article-body.scss';
-// @import '../component/detail-page/audio/audio.scss';
-// @import '../component/detail-page/comment/comment.scss';
+@import '../component/detail-page/article-header/article-header.scss';
+@import '../component/detail-page/article-body/article-body.scss';
+@import '../component/detail-page/audio/audio.scss';
+@import '../component/detail-page/comment/comment.scss';
 // @import '../component/detail-page/interview/interview.scss';
 // @import '../component/detail-page/live/live.scss';
 // @import '../component/detail-page/longform/longform.scss';
@@ -57,5 +57,5 @@
 // @import '../component/box-style/multi-pack/multi-pack.scss';
 @import '../component/box-style/story/story.scss';
 // @import '../component/box-style/abf-cate/abf-cate.scss';
-// @import '../component/box-style/suggest/suggest.scss';
+@import '../component/box-style/suggest/suggest.scss';
 // @import '../component/box-style/slider-vertical/slider-vertical.scss';

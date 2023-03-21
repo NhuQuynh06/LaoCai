@@ -21,8 +21,13 @@
             width: 100%;
 
             .d-flex {
-                justify-content: space-between;
-                align-items: center;
+                display: block;
+
+                @media (min-width: 1024px) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
             }
 
             .col {
@@ -32,14 +37,6 @@
                 font-weight: $font-weight-medium;
                 display: flex;
                 align-items: center;
-
-                >* {
-                    margin-left: 12px;
-
-                    &:first-child {
-                        margin-left: 0;
-                    }
-                }
 
                 .col {
 
@@ -350,7 +347,7 @@
         color: #ffffff;
         display: flex;
         align-items: center;
-        margin: 0 auto;
+        margin: 16px auto 0;
 
         &::after {
             display: inline-block;
@@ -376,5 +373,8 @@
         text-transform: uppercase;
         color: #FFFFFF;
         background: #DC3545 url(../img/comment.png) center left 20px no-repeat;
+        margin-left: auto;
+        display: flex;
+        margin-top: 12px;
     }
 }

@@ -76,11 +76,12 @@
         overflow: hidden;
         width: 100%;
         font-size: 16px;
+        color: #495057;
 
         &::placeholder {
             font-size: 16px;
             line-height: 19px;
-            color: #212529;
+            color: #495057;
         }
     }
 
@@ -138,6 +139,7 @@
                 color: #495057;
                 padding: 10px 0;
                 display: flex;
+                align-items: center;
                 width: 100%;
                 justify-content: space-between;
             }

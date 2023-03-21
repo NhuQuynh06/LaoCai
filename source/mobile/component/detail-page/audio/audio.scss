@@ -300,13 +300,14 @@
 
 
 // > bm-player
+.tts-player,
 .audio {
     @include audio-player;
     height: 60px;
     font-size: 0;
-    background-color: #F7F7F7;
-    border: 1px solid #DEE2E6;
+    background-color: #F8F9FA;
     padding-left: 16px;
+    margin: 16px -16px;
 
     .play-button {
         min-width: 36px;

@@ -1,4 +1,17 @@
 .timeline {
+    .box-heading {
+        margin-bottom: 16px;
+    }
+
+    .title {
+        font-family: $font-family-branch;
+        font-weight: $font-weight-normal;
+        font-size: 25px;
+        line-height: 37px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
     .story {
         margin-top: 16px;
         padding-top: 16px;

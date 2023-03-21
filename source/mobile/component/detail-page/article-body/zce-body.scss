@@ -197,6 +197,12 @@
 
 // style global
 .zce-content-body {
+    >* {
+        font-weight: $font-weight-normal;
+        font-size: 18px;
+        line-height: 28px;
+        color: #343A40;
+    }
 
     ul {
         li {
@@ -228,7 +234,7 @@
 
 
     blockquote {
-        padding: 144px 60px 60px;
+        padding-top: 144px;
         background: url(../img/quote.png) top 50px center/61px no-repeat;
         font-weight: $font-weight-semibold;
         font-size: 22px;
@@ -320,6 +326,7 @@
                 font-weight: $font-weight-medium;
                 font-size: 14px;
                 line-height: 20px;
+                white-space: nowrap;
             }
 
             .btn-send {
@@ -333,13 +340,13 @@
             }
         }
 
-        &.outset-left {
-            margin-right: 40px !important;
+        // &.outset-left {
+        //     margin-right: 40px !important;
 
-        }
+        // }
 
-        &.outset-right {
-            margin-left: 40px !important;
-        }
+        // &.outset-right {
+        //     margin-left: 40px !important;
+        // }
     }
 }

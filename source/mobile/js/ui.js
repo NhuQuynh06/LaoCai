@@ -112,12 +112,27 @@ btn.on('click', function (e) {
 // ----------------------------------
 // INFO : Js for project, be changed
 // ----------------------------------
+$(".breadcrumbs .ic-down3").click(function (e) {
+    e.preventDefault();
+    $(".breadcrumbs .sub").slideToggle();
+});
 
 $('.topics').slick({
     dots: true,
     infinite: true,
     slidesToShow: 1,
     centerMode: true,
+    speed: 1000,
+    autoplaySpeed: 8000,
+    arrows: false,
+    dots: false,
+});
+
+$('.suggest .box-content').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     speed: 1000,
     autoplaySpeed: 8000,
     arrows: false,
